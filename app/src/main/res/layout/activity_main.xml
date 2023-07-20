@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="61dp"
         android:paddingStart="50dp"
-        android:text="Email:"
+        android:text="Email"
         android:textColor="#FFFFFF"
         android:textSize="34sp" />
 
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:paddingStart="50dp"
-        android:text="Password:"
+        android:text="Password"
         android:textColor="#FDFCFC"
         android:textSize="34sp" />
 
