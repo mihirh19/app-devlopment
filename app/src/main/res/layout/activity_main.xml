@@ -24,7 +24,8 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:textColor="#FFFFFF"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:hint="email" />
 
     <TextView
         android:id="@+id/textView5"
@@ -42,7 +43,8 @@
         android:ems="10"
         android:inputType="textPassword"
         android:textColor="#FFFFFF"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:hint="password"  />
 
     <Button
         android:id="@+id/button2"
