@@ -18,9 +18,11 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
+
         android:layout_height="101dp"
         android:text="Username"
         android:textSize="25dp" />
+
 
     <EditText
         android:id="@+id/editTextText"
@@ -38,9 +40,11 @@
         android:text="Password"
         android:textSize="25dp" />
 
+
     <EditText
         android:id="@+id/editTextText2"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="password"
