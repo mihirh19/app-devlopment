@@ -9,47 +9,49 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView4"
         android:layout_width="match_parent"
-        android:layout_height="61dp"
-        android:paddingStart="50dp"
-        android:text="Email"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp" />
-
-    <EditText
-        android:id="@+id/editTextTextEmailAddress4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:hint="email" />
+        android:layout_height="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:paddingStart="50dp"
-        android:text="Password"
-        android:textColor="#FDFCFC"
-        android:textSize="34sp" />
+        android:layout_height="53dp"
+        android:text="username"
+        android:textSize="28dp" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editTextText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPassword"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:hint="password"  />
+        android:inputType="text"
+        android:hint="username"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:text="Password"
+        android:textSize="28dp" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Password"
+        android:textSize="25dp" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:text="Submit" />
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:text="submit" />
+
 </LinearLayout>
