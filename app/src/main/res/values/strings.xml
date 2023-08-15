@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">labapp</string>
+    <string name="name">Name</string>
+    <string name="enter_name">Enter name</string>
+    <string name="location">Location</string>
+    <string name="enter_location">Enter location</string>
+    <string name="designation">Designation</string>
+    <string name="enter_designation">Enter designation</string>
+    <string name="save">Save</string>
+    <string name="back">Back</string>
 </resources>
