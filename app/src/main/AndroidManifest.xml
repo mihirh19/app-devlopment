@@ -22,8 +22,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".validateActivity"
-            android:label="Shared pref details" />
+
+            android:name=".DetailsActivity"
+            android:label="Internal storage- details" />
+
     </application>
 
 </manifest>
