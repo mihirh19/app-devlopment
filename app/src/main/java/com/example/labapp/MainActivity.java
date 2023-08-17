@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        user = findViewById(R.id.editTextText);
-        pass = findViewById(R.id.editTextText2);
+        user = (EditText) findViewById(R.id.editTextText);
+        pass = (EditText) findViewById(R.id.editTextText2);
 
         loginbtn = (Button) findViewById(R.id.button);
         pref = getSharedPreferences("user_details", MODE_PRIVATE);
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                     SharedPreferences.Editor editor = pref.edit();
                     editor.putString("username", username);
                     editor.putString("password", password);
-                    editor.apply();
+                    editor.commit();
                    Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
                     startActivity(intent);
 
