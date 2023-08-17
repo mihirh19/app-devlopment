@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="53dp"
         android:text="username"
-        android:textSize="28dp" />
+        android:textSize="28sp" />
 
     <EditText
         android:id="@+id/editTextText"
