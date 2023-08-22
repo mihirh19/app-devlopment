@@ -18,7 +18,7 @@ public class detailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_details);
+        setContentView(R.layout.activity_details);21
         DbHandler db = new DbHandler(this);
         ArrayList<HashMap<String, String>> userList = db.GetUsers();
         ListView lv = (ListView) findViewById(R.id.user_list);
