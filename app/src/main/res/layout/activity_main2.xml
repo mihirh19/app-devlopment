@@ -1,36 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
+
 
     <Button
-        android:id="@+id/btnCap"
+        android:id="@+id/btnVCap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/take_a_photo"
+        android:text="@string/record_video"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="140dp"
+        android:layout_marginStart="10dp"
         />
 
     <Button
-        android:id="@+id/btnVd"
+        android:id="@+id/btn_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/video"
+        android:text="@string/photo"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/btnCap"
-        />
+        android:layout_toEndOf="@+id/btnVCap"/>
 
-    <ImageView
+    <VideoView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/capIV"
-        android:contentDescription="@string/image" />
-
-
+        android:id="@+id/capVV"/>
 </RelativeLayout>
