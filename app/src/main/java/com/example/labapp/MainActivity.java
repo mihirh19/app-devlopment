@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,7 +14,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button  btn = findViewById(R.id.button);
+
         btn.setOnClickListener(v->{
+            Toast.makeText(this, "Button Clicked", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(MainActivity.this, HomeActivity.class));
         });
     }
