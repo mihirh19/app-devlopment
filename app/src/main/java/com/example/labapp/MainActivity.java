@@ -2,7 +2,10 @@ package com.example.labapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
@@ -20,11 +23,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView img = findViewById(R.id.gifImageView);
         img.setImageResource(R.drawable.giphy);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(MainActivity.this, HomeActivity.class));
-            }
-        }, 5000);
+        new Handler().postDelayed(() -> startActivity(new Intent(MainActivity.this, HomeActivity.class)), 5000);
     }
 }
+
