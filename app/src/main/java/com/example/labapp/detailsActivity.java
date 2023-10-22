@@ -31,7 +31,6 @@ public class detailsActivity extends AppCompatActivity {
                 intent = new Intent(detailsActivity.this,MainActivity.class);
                 startActivity(intent);
             }
-
         });
 
     }
