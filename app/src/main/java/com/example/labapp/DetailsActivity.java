@@ -1,45 +1,37 @@
 package com.example.labapp;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 
-import androidx.appcompat.app.AppCompatActivity;
+import java.util.ArrayList;
+import java.util.HashMap;
 
-import java.io.FileInputStream;
-
-public class DetailsActivity  extends AppCompatActivity {
-
-        FileInputStream fstream;
-        Intent intent;
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.details);
-            TextView result = (TextView) findViewById(R.id.textView5);
-            Button back = (Button) findViewById(R.id.button2);
-            try {
-                fstream = openFileInput("user_details");
-                int i;
-                StringBuffer buffer = new StringBuffer();
-                while ((i = fstream.read()) != -1) {
-                    buffer.append((char) i);
-                }
-                String [] details = buffer.toString().split("\n");
-                result.setText("Name: " + details[0] + "\n" + "Password: " + details[1]);
-            } catch (Exception e) {
-                e.printStackTrace();
+public class detailsActivity extends AppCompatActivity {
+    Intent intent;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_details);
+        DbHandler db = new DbHandler(this);
+        ArrayList<HashMap<String, String>> userList = db.GetUsers();
+        ListView lv = (ListView) findViewById(R.id.user_list);
+        ListAdapter adapter = new SimpleAdapter(detailsActivity.this, userList, R.layout.list_row,new String[]{"name","designation","location"}, new int[]{R.id.name, R.id.designation, R.id.location});
+        lv.setAdapter(adapter);
+        Button back = (Button)findViewById(R.id.btnBack);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(detailsActivity.this,MainActivity.class);
+                startActivity(intent);
             }
+        });
 
-            back.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    intent = new Intent(DetailsActivity.this, MainActivity.class);
-                    startActivity(intent);
-                }
-            });
-
-        }
+    }
 }
